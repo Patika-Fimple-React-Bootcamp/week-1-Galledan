@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  display: flex;
+  height: 500px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+
+.list-container > ul {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+  width: 110%;
+  gap: 15px;
+  list-style: ordered;
+}
