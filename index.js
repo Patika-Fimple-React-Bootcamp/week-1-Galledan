@@ -1,6 +1,8 @@
 const fetchData = async () => {
 
   const loadEl = document.querySelector(".loading"); // loading divini aldık
+  const List = document.querySelector("ul");
+  List.style.display = 'none';
   loadEl.style.display = 'block' // CSS'te display: none var bizde burada gözükmezi için block yaptık
 
 
@@ -8,12 +10,12 @@ const fetchData = async () => {
     "https://jsonplaceholder.typicode.com/todos?_limit=5"
   ); // apidan response aldık
 
-  const data = await res.json();
-  console.log(data); //.json ile aldığımız response'ı çevirdik 
+  const data = await res.json(); //.json ile aldığımız response'ı çevirdik 
 
   fillData(data); // aldığımız datayı fillData fonksiyonu'na yollayıp doldurduk.
 
   loadEl.style.display = 'none';
+  List.style.display = 'flex';
 };
 
 fetchData(); 
