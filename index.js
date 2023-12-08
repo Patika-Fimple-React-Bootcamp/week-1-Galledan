@@ -37,11 +37,14 @@ const handleSubmit = (e) => { // Submit için fonksiyon
   //Api'dan çektiğimiz itemlardan ayrı yeni item eklemek için bir li item oluşturduk ve bunu formdaki inputlarla doldurduk ve listeye ekledik.
   const liItem = document.createElement("li");
   const titleInput = document.querySelector(".titleInput");
-  const titleValue = titleInput.value;
+  let titleValue = titleInput.value;
   const checkInput = document.querySelector(".checkInput");
-  const checkValue = checkInput.checked;
+  let checkValue = checkInput.checked;
   liItem.innerText = `Title: ${titleValue}, Checked: ${checkValue}`;
   List.appendChild(liItem);
+
+  titleInput.value = ''
+  checkInput.checked = false;
 };
 
 const form = document.querySelector(".form-container");
